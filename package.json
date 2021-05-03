@@ -9,6 +9,7 @@
     "axios": "^0.21.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "web-vitals": "^1.1.1"
   },
@@ -16,10 +17,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "browserslist": {
-    "prod.ction": [
+    "production": [
       ">0.2%",
       "not dead",
       "not op_mini all"
@@ -31,8 +33,38 @@
     ]
   },
   "devDependencies": {
-    "eslint": "^7.2.0",
+    "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "airbnb-base",
+      "react-app",
+      "react-app/jest"
+    ],
+    "env": {
+      "es6": true,
+      "browser": true
+    },
+    "rules": {
+      "brace-style": [
+        "error",
+        "stroustrup"
+      ],
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
+      "no-unused-vars": [
+        "warn"
+      ],
+      "no-var": [
+        "warn"
+      ],
+      "one-var": [
+        "warn"
+      ]
+    }
   }
 }
