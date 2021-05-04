@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import placeService from '../../services';
+import { placeService } from '../../services/index';
 
 class Home extends Component {
   constructor(props) {

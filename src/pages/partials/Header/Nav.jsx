@@ -8,7 +8,7 @@ function Nav(props) {
 
   return (
     <ul>
-      <li><Link to='/home'>Home</Link></li>
+      <li><Link to='/home'>LOGO</Link></li>
       <li><button onClick={logout}>Deconnexion</button></li>
     </ul>
   );

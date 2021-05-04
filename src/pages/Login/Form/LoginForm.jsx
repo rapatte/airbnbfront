@@ -25,7 +25,7 @@ class LoginForm extends React.Component {
       const { email, password } = this.state;
 
       try {
-        const response = await userService.login(email, password);
+        const response = await userService.login({ email, password });
         localStorage.setItem('token', response.data.token);
         this.context.setAuth(true);
         this.props.history.push('/');
