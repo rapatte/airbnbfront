@@ -1,5 +1,17 @@
+/* eslint-disable no-param-reassign */
 import axios from 'axios';
 
-export default axios.create({
+const api = axios.create({
   baseURL: 'http://localhost:8080/api'
 });
+
+// Pour chaque requete, on verifie si un token existe dans le localStorage
+api.interceptors.request.use((config) => {
+  const token = localStorage.getItem('token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+export default api;

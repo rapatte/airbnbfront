@@ -1,3 +1,5 @@
-import place from './place';
+import placeService from './place';
+import userService from './user';
 
-export default place;
+export { placeService, userService };
+export default placeService;

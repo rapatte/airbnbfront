@@ -1,11 +1,11 @@
+/* eslint-disable arrow-body-style */
+/* eslint-disable no-return-await */
 import api from './api';
 
-const places = {
-  // eslint-disable-next-line arrow-body-style
+const placeService = {
   getAll: async () => {
-    // eslint-disable-next-line no-return-await
     return await api.get('/places');
   }
 };
 
-export default places;
+export default placeService;

@@ -1,25 +1,23 @@
-/* eslint-disable class-methods-use-this */
 import React, { Component, Fragment } from 'react';
-import places from '../../services';
+import placeService from '../../services';
 
 class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      places: ['vide'],
+      places: null,
       error: null
     };
   }
 
   async componentDidMount() {
     try {
-      const responsePlaces = await places.getAll();
-      console.log(responsePlaces);
-    //   this.setState({ places: responsePlaces.places });
+      const response = await placeService.getAll();
+      console.log(response);
+      this.setState({ places: response.places });
     }
-    catch (error) {
+    catch (e) {
       this.setState({ error: 'erreur serveur' });
-      console.log(this.state.error);
     }
   }
 
