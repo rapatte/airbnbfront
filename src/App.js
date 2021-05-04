@@ -7,6 +7,7 @@ import { Header } from './pages/partials/Header';
 import Login from './pages/Login';
 import Home from './pages/Home';
 import { appContext } from './store';
+import Bookings from './pages/Bookings';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const store = React.useContext(appContext);
@@ -26,7 +27,7 @@ function App() {
     <Switch>
       <Route exact path='/' component={ Home } />
       <Route exact path='/login' component={ Login } />
-      <PrivateRoute exact path='/home' component={Home} />
+      <PrivateRoute exact path='/bookings' component={Bookings} />
     </Switch>
   </Router>
   );
