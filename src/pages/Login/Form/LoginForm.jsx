@@ -29,7 +29,7 @@ class LoginForm extends React.Component {
         console.log(response);
         localStorage.setItem('token', response.data.token);
         this.context.setAuth(true);
-        // this.props.history.push('/');
+        this.props.history.push('/bookings');
       }
       catch (err) {
         this.setState({ error: err.message });
