@@ -53,6 +53,9 @@
         "error",
         "stroustrup"
       ],
+      "linebreak-style": [
+        "off"
+      ],
       "comma-dangle": [
         "error",
         "never"

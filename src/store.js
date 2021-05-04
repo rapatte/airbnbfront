@@ -18,7 +18,7 @@ class AppProvider extends React.Component {
     }
 
     setAuth = (boolean) => {
-      this.setState({ boolean });
+      this.setState({ isAuth: boolean });
     }
 
     render() {
@@ -30,5 +30,5 @@ class AppProvider extends React.Component {
     }
 }
 
-export { AppProvider };
-export default appContext;
+export { AppProvider, appContext };
+// export default appContext;
