@@ -2,7 +2,7 @@ import React, { Component, Fragment } from 'react';
 import { placeService } from '../../services/index';
 import CreationForm from './CreationForm.jsx';
 
-class Home extends Component {
+class PlaceCreation extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -29,4 +29,4 @@ class Home extends Component {
     );
   }
 }
-export default Home;
+export default PlaceCreation;

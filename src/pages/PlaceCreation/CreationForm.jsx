@@ -1,6 +1,6 @@
 import React from 'react';
 import { placeService } from '../../services/index';
-import appContext from '../../store';
+import { appContext } from '../../store';
 import Button from '../../components/Button/index.jsx';
 
 class CreationForm extends React.Component {
@@ -47,7 +47,7 @@ class CreationForm extends React.Component {
         {(store) => (
                     <div>
                         {this.state.error && <h6>{this.state.error}</h6>}
-                        <input type="text" name="cityId" value={this.state.cityId} onChange={this.handleChange} />
+                        <input type="number" name="cityId" value={this.state.cityId} onChange={this.handleChange} />
                         <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
                         <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />
                         <input type="number" name="rooms" value={this.state.rooms} onChange={this.handleChange} />
