@@ -10,13 +10,14 @@ class CreationForm extends React.Component {
       super(props);
 
       this.state = {
-        cityId: '',
+        city: '',
         name: '',
         description: '',
         rooms: '',
         bathrooms: '',
-        maxGuets: '',
-        priceByNight: '',
+        max_guets: '',
+        price_by_night: '',
+        host: 1,
         error: null
       };
     }
@@ -28,16 +29,19 @@ class CreationForm extends React.Component {
 
     handleClick = async (e) => {
       const {
-        cityId, name, description, rooms, bathrooms, maxGuets, priceByNight
+        name, description, rooms, bathrooms
       } = this.state;
+      const cityId = this.state.city_id;
+      const maxGuests = this.state.max_guests;
+      const priceByNight = this.state.price_by_night;
 
       try {
         await placeService.createPlace(
-          cityId, name, description, rooms, bathrooms, maxGuets, priceByNight
+          cityId, name, description, rooms, bathrooms, maxGuests, priceByNight
         );
       }
       catch (err) {
-        this.setState({ error: e.response.data.error });
+        this.setState({ error: 'erreur serveur' });
       }
     };
 
@@ -45,15 +49,15 @@ class CreationForm extends React.Component {
       return (
         <appContext.Consumer>
         {(store) => (
-                    <div>
+                    <div className='forms'>
                         {this.state.error && <h6>{this.state.error}</h6>}
-                        <input type="number" name="cityId" value={this.state.cityId} onChange={this.handleChange} />
-                        <input type="text" name="name" value={this.state.name} onChange={this.handleChange} />
-                        <input type="text" name="description" value={this.state.description} onChange={this.handleChange} />
-                        <input type="number" name="rooms" value={this.state.rooms} onChange={this.handleChange} />
-                        <input type="number" name="bathrooms" value={this.state.bathrooms} onChange={this.handleChange} />
-                        <input type="number" name="maxGuets" value={this.state.maxGuets} onChange={this.handleChange} />
-                        <input type="number" name="priceByNight" value={this.state.priceByNight} onChange={this.handleChange} />
+                        <input placeholder='city id' type="number" name="city" value={this.state.city} onChange={this.handleChange} />
+                        <input placeholder='name' type="text" name="name" value={this.state.name} onChange={this.handleChange} />
+                        <input placeholder='description' type="text" name="description" value={this.state.description} onChange={this.handleChange} />
+                        <input placeholder='rooms' type="number" name="rooms" value={this.state.rooms} onChange={this.handleChange} />
+                        <input placeholder='bathrooms' type="number" name="bathrooms" value={this.state.bathrooms} onChange={this.handleChange} />
+                        <input placeholder='max guests' type="number" name="max_guests" value={this.state.max_guests} onChange={this.handleChange} />
+                        <input placeholder='price by night' type="number" name="price_by_night" value={this.state.price_by_night} onChange={this.handleChange} />
                         <Button size="small" value="Mettre en location" handleClick={this.handleClick} />
                     </div>
         )}
