@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import { bookingService } from '../../services/index';
+import './style.scss';
+import Bookingbloc from './bookingbloc.jsx';
 
 class Home extends Component {
   constructor(props) {
@@ -13,7 +15,7 @@ class Home extends Component {
   async componentDidMount() {
     try {
       const response = await bookingService.getAll();
-      console.log(`booking${response.bookingTab}`);
+      console.log(response);
       this.setState({ booking: response.bookingTab });
     }
     catch (e) {
@@ -23,11 +25,13 @@ class Home extends Component {
 
   render() {
     const bookings = this.state.booking;
-    const bookinglist = bookings.map((booking) => <li>{booking}</li>);
+    // console.log(bookings);
+    // const bookinglist = bookings.map((booking) => <li>{booking}</li>);
     return (
-        <Fragment>
-            <ul>{bookinglist}</ul>
-        </Fragment>
+      <main>
+
+        <Bookingbloc />
+      </main>
     );
   }
 }

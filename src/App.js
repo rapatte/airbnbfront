@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Home from './pages/Home';
 import { appContext } from './store';
 import Bookings from './pages/Bookings';
+import Bookingconsulte from './pages/bookingconsulte/index.jsx';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const store = React.useContext(appContext);
@@ -27,7 +28,8 @@ function App() {
     <Switch>
       <Route exact path='/' component={ Home } />
       <Route exact path='/login' component={ Login } />
-      <PrivateRoute exact path='/bookings' component={Bookings} />
+      <Route exact path='/consult' component={ Bookingconsulte } />
+      <Route exact path='/bookings' component={Bookings} />
     </Switch>
   </Router>
   );
