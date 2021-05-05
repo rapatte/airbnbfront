@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  .forms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    input {
+      :not(:last-child) {
+        padding-bottom:2vh;
+      }
+    }
+  }
+}

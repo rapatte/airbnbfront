@@ -1,7 +1,10 @@
 import React from 'react';
+import Cookies from 'universal-cookie';
 import { userService } from '../../../services/index';
 import Button from '../../../components/Button/index.jsx';
 import { appContext } from '../../../store';
+
+const cookies = new Cookies();
 
 class LoginForm extends React.Component {
     static contextType = appContext;
@@ -26,10 +29,11 @@ class LoginForm extends React.Component {
 
       try {
         const response = await userService.login(email, password);
-        console.log(response);
         localStorage.setItem('token', response.data.token);
         this.context.setAuth(true);
-        // this.props.history.push('/bookings');
+        this.props.history.push('/');
+        const { user } = response.data;
+        this.context.setUser({ user });
       }
       catch (err) {
         this.setState({ error: err.message });

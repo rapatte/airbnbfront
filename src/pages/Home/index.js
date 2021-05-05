@@ -29,7 +29,6 @@ class Home extends Component {
         <main>
             <h1>{(this.state.places.length !== 0) ? this.state.places[10].name : null}</h1>
         </main>
-
     );
   }
 }
