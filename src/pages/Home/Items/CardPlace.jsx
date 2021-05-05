@@ -11,7 +11,7 @@ function CardPlace(props) {
                     <li>{props.name}</li>
                     <li>
                         <span> · </span>
-                        Paris
+                        {props.city}
                     </li>
                 </ul>
             </div>
