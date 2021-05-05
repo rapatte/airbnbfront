@@ -8,7 +8,7 @@ function Nav(props) {
   };
 
   return (
-    <ul>
+    <ul className="nav-list">
       <li><Link to='/'>LOGO</Link></li>
       <li><Link to='/createPlace'>LOUER</Link></li>
       <li><Link to='/bookings'>BOOKING</Link></li>

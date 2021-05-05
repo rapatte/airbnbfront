@@ -1,6 +1,7 @@
 /* eslint-disable class-methods-use-this */
 import React, { Component, Fragment } from 'react';
 import { placeService } from '../../services/index';
+import CardPlace from './Items/CardPlace.jsx';
 
 class Home extends Component {
   constructor(props) {
@@ -24,10 +25,17 @@ class Home extends Component {
 
   render() {
     // NEED A FUNCTION TO AVOID LONG FUNCTIONS
-    console.log(this.state.places);
+    const elements = this.state.places;
+    console.log(elements);
+    const listPlaces = elements.map((place, i) => <CardPlace key={i} name={place.name}
+    description={place.description}/>);
+
     return (
         <main>
-            <h1>{(this.state.places.length !== 0) ? this.state.places[10].name : null}</h1>
+            {/* <h1>{(elements.length !== 0) ? elements[10].name : null}</h1> */}
+            <section className='grid-box'>
+              {listPlaces}
+            </section>
         </main>
     );
   }
