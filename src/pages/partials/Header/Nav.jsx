@@ -1,4 +1,5 @@
 import { Link, withRouter } from 'react-router-dom';
+import './nav.scss';
 
 function Nav(props) {
   const logout = () => {
@@ -11,6 +12,7 @@ function Nav(props) {
       <li><Link to='/home'>LOGO</Link></li>
       <li><Link to='/createPlace'>LOUER</Link></li>
       <li><Link to='/bookings'>BOOKING</Link></li>
+      <li><Link to='/consult'>consult</Link></li>
       <li><Link to='/login'>LOGIN</Link></li>
       <li><button onClick={logout}>Deconnexion</button></li>
     </ul>

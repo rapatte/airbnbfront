@@ -1,3 +1,6 @@
+@import '../../assets/main.scss';
+
+
 .small {
     width: 30%;
 }
@@ -12,4 +15,20 @@
 
 .full {
     width: 100%;
+}
+
+.red {
+    background-color: $maincolor;
+}
+
+button.red {
+    margin-top: 35px;
+    background-color: white;
+    border: 1px solid $maincolor;
+    line-height: 0;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 20px 15px ;
+    border-radius: 60px;
+    color: $maincolor;
 }

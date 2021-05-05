@@ -31,7 +31,7 @@ class LoginForm extends React.Component {
         const response = await userService.login(email, password);
         localStorage.setItem('token', response.data.token);
         this.context.setAuth(true);
-        this.props.history.push('/createPlace');
+        this.props.history.push('/');
         const { user } = response.data;
         this.context.setUser({ user });
       }
