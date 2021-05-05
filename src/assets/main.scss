@@ -1,5 +1,52 @@
-$maincolor:rgb(255, 56, 92);
+
+$maincolor: rgb(255, 56, 92);
 $black: #000000;
 $white: #ffffff;
 $whitesmoke: #c8c8c8;
 $grey: #bbbbbb;
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+//placeholders
+%flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+
+%fontMulish{
+    font-family: 'Mulish', sans-serif;
+}
+
+// comun css
+main {
+  padding: 3%;
+}
+
+h1,
+h3,
+h4,
+h5,
+p,
+span {
+  margin: 0;
+  @extend %fontMulish;
+}
+
+h2{
+    margin: 4% 0%;
+    @extend %fontMulish;
+}
+
+.button_red {
+  display: block;
+  width: 100%;
+  background: $maincolor;
+  color: $white;
+  height: 9vh;
+  margin: 4% auto;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}

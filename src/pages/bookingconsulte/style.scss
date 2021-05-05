@@ -1,0 +1,66 @@
+@import "../../assets/main.scss";
+
+.consultpage {
+  .datecontainer {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    border: 1px solid $grey;
+    overflow: hidden;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 3% 2%;
+
+      p:nth-child(1) {
+        font-weight: bold;
+      }
+    }
+
+    div:nth-child(1) {
+      width: 45%;
+      border-bottom: 1px solid $grey;
+      border-right: 1px solid $grey;
+    }
+    div:nth-child(2) {
+      width: 45.9%;
+      border-bottom: 1px solid $grey;
+    }
+    div:nth-child(3) {
+      width: 97%;
+    }
+  }
+
+  .cash {
+    margin: 3%;
+    padding: 2%;
+    border-bottom: 1px solid $grey;
+    border-top: 1px solid $grey;
+
+    div {
+      display: flex;
+      justify-content: space-between;
+      margin: 1%;
+    }
+  }
+
+  .totalcash {
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    margin: 1%;
+    font-weight: bold;
+  }
+}
+
+.bottomcontainer{
+    border-top: 1px solid $grey;
+    position: fixed;
+    bottom: 0;
+    width: 96%;
+
+    .button_red{
+        width: 90%;
+    }
+}
