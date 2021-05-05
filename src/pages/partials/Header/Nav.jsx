@@ -1,4 +1,5 @@
 import { Link, withRouter } from 'react-router-dom';
+import './nav.scss';
 
 function Nav(props) {
   const logout = () => {

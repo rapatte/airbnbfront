@@ -26,10 +26,10 @@ class Home extends Component {
     // NEED A FUNCTION TO AVOID LONG FUNCTIONS
     console.log(this.state.places);
     return (
-        <Fragment>
-            <h1>{(this.state.places.length !== 0) ? this.state.places[1].name : ''}</h1>
+        <main>
+            <h1>{(this.state.places.length !== 0) ? this.state.places[10].name : null}</h1>
+        </main>
 
-        </Fragment>
     );
   }
 }
