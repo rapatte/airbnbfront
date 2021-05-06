@@ -6,8 +6,8 @@ import './header.scss';
 function Header() {
   return (
     <header>
-      <SearchBar />
       <Nav />
+      <SearchBar />
     </header>
   );
 }
