@@ -27,7 +27,7 @@ class Home extends Component {
     console.log(this.state.places);
     return (
         <main>
-            <h1>{(this.state.places.length !== 0) ? this.state.places[10].name : null}</h1>
+            <h1>{(this.state.places.length !== 0) ? this.state.places[0].name : null}</h1>
         </main>
     );
   }
