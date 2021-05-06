@@ -3,6 +3,7 @@
 /* eslint-disable prefer-const */
 import React from 'react';
 import Button from '../../../components/Button/index.jsx';
+import './search.scss';
 
 class SearchBar extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class SearchBar extends React.Component {
           <label htmlFor="guests">Guests</label>
         </div>
 
-        <Button size="small" color="red" value="Rechercher" />
+        <Button color="red" value="+" />
       </form>
     );
   }

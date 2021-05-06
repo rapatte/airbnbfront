@@ -30,8 +30,8 @@ class Home extends Component {
     name={booking.place.name} description={booking.place.description} city={booking.place.city}
     room={booking.place.rooms}bathroom={booking.place.bathrooms} guest={booking.place.max_guests}
     price={booking.place.price_by_night} firstname={booking.user.first_name}
-    lastname={booking.user.last_name} checkin={booking.check_in}
-    checkout={booking.check_out}/>);
+    lastname={booking.user.last_name} checkin={booking.check_in.substring(0, 10)}
+    checkout={booking.check_out.substring(0, 10)}/>);
     return (
       <main>
         {bookinglist}
