@@ -15,7 +15,7 @@ class Home extends Component {
   async componentDidMount() {
     try {
       const response = await bookingService.getAll();
-      console.log(response.data.bookingTab);
+      console.log(response.data);
       this.setState({ booking: response.data.bookingTab });
     }
     catch (e) {
@@ -28,7 +28,7 @@ class Home extends Component {
     console.log(bookings);
     const bookinglist = bookings.map((booking) => <Bookingbloc id={booking.id}
     name={booking.place.name} description={booking.place.description} city={booking.place.city}
-    room={booking.place.rooms}bathroom={booking.place.bathrooms} guest={booking.place.city}
+    room={booking.place.rooms}bathroom={booking.place.bathrooms} guest={booking.place.max_guests}
     price={booking.place.price_by_night} firstname={booking.user.first_name}
     lastname={booking.user.last_name} checkin={booking.check_in}
     checkout={booking.check_out}/>);
