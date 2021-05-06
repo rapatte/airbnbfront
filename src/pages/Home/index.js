@@ -62,6 +62,7 @@ class Home extends Component {
             <section className='grid-box'>
               {listPlaces}
             </section>
+
         </main>
     );
   }

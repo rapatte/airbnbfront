@@ -8,37 +8,32 @@ class CreationForm extends React.Component {
 
     constructor(props) {
       super(props);
-
       this.state = {
-        city: '',
-        name: '',
-        description: '',
-        rooms: '',
-        bathrooms: '',
-        max_guets: '',
-        price_by_night: '',
-        host: 1,
-        error: null
+        city: null,
+        name: null,
+        description: null,
+        rooms: null,
+        bathrooms: null,
+        max_guests: null,
+        price_by_night: null,
+        host: null
       };
     }
 
     handleChange = (e) => {
+      this.setState({ host: this.context.user.user.id });
       const { name, value } = e.target;
-      this.setState({ [name]: value });
+      this.setState({ [name]: Number(value) });
+      if (isNaN(Number(value))) {
+        this.setState({ [name]: value });
+      }
+      console.log(this.state);
     }
 
     handleClick = async (e) => {
-      const {
-        name, description, rooms, bathrooms
-      } = this.state;
-      const cityId = this.state.city_id;
-      const maxGuests = this.state.max_guests;
-      const priceByNight = this.state.price_by_night;
-
       try {
-        await placeService.createPlace(
-          cityId, name, description, rooms, bathrooms, maxGuests, priceByNight
-        );
+        const place = this.state;
+        await placeService.createPlace(place);
       }
       catch (err) {
         this.setState({ error: 'erreur serveur' });
