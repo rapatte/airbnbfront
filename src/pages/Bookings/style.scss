@@ -1,8 +1,67 @@
 @import "../../assets/main.scss";
 
 .bookingbloc {
-  border: 1px solid $maincolor;
-  height: 5vh;
-  margin: 0 auto;
+  border: 1px solid $whitesmoke;
+  height: auto;
+  margin: 2% auto;
   border-radius: 5px;
+  padding: 5%;
+
+  h2{
+    margin: 0;
+    color: $maincolor
+  }
+
+  .deatilsbloc{
+    display: flex;
+    margin: 3% 0%;
+
+    div{
+      width: 20%;
+      padding: 2%;
+      margin: 1%;
+      border: 1px solid $maincolor;
+      border-radius: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+  }
+
+  .users{
+    border-top: 1px solid $grey;
+    border-bottom: 1px solid $grey;
+    padding: 2% 0%;
+    margin: 5% 0%;
+    p{
+      display: flex;
+      p{
+        margin: 0 2%;
+        font-weight: bold;
+      }
+    }
+    .deatilsblocfordate{
+      display: flex;
+      margin: 3% 0%;
+  
+      div{
+        width: 45%;
+        padding: 2%;
+        margin: 1%;
+        border: 1px solid $maincolor;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+    }
+
+    .button_red{
+      height: 4vh;
+      font-weight: lighter;
+      cursor: pointer;
+    }
+  }
 }

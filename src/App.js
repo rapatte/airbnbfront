@@ -29,7 +29,6 @@ function App() {
     <Switch>
       <Route exact path='/' component={ Home } />
       <Route exact path='/login' component={ Login } />
-      <PrivateRoute exact path='/bookings' component={ Bookings } />
       <PrivateRoute exact path='/createPlace' component={ PlaceCreation } />
       <Route exact path='/consult' component={ Bookingconsulte } />
       <Route exact path='/bookings' component={Bookings} />
