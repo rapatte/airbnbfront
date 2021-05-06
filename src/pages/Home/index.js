@@ -9,6 +9,7 @@ class Home extends Component {
     this.state = {
       places: [],
       cities: [],
+      unavailables: [],
       error: null
     };
   }
@@ -18,8 +19,16 @@ class Home extends Component {
       const response = await placeService.getAll();
       this.setState({ places: response.data.places });
 
+      const checkIn = '2021-05-01';
+      const checkOut = '2021-06-01';
+      const unavailables = await placeService.getUnavailables(checkIn, checkOut);
+      this.setState({ unavailables: unavailables.data.places });
+
+      // remove unavailables from places
+
       const cities = await CitiesService.getAll();
       this.setState({ cities: cities.data });
+      console.log(this.state);
     }
     catch (e) {
       this.setState({ error: 'erreur serveur' });
@@ -27,7 +36,6 @@ class Home extends Component {
   }
 
   render() {
-    // NEED A FUNCTION TO AVOID LONG FUNCTIONS
     const { cities, places } = this.state;
 
     const getCity = (cityId) => {
