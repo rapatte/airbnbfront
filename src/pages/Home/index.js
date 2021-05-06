@@ -24,7 +24,7 @@ class Home extends Component {
 
   render() {
     // NEED A FUNCTION TO AVOID LONG FUNCTIONS
-    console.log(this.state.places);
+    // console.log(this.state.places);
     return (
         <main>
             <h1>{(this.state.places.length !== 0) ? this.state.places[0].name : null}</h1>

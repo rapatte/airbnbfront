@@ -14,6 +14,7 @@ function Nav(props) {
       <li><Link to='/bookings'>BOOKING</Link></li>
       <li><Link to='/consult'>consult</Link></li>
       <li><Link to='/login'>LOGIN</Link></li>
+      <li><Link to='/myPlaces'>MY PLACES</Link></li>
       <li><button onClick={logout}>Deconnexion</button></li>
     </ul>
   );

@@ -27,7 +27,6 @@ class CreationForm extends React.Component {
       if (isNaN(Number(value))) {
         this.setState({ [name]: value });
       }
-      console.log(this.state);
     }
 
     handleClick = async (e) => {
