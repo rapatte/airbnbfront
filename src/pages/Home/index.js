@@ -17,18 +17,27 @@ class Home extends Component {
   async componentDidMount() {
     try {
       const response = await placeService.getAll();
-      this.setState({ places: response.data.places });
 
       const checkIn = '2021-05-01';
       const checkOut = '2021-06-01';
       const unavailables = await placeService.getUnavailables(checkIn, checkOut);
       this.setState({ unavailables: unavailables.data.places });
 
-      // remove unavailables from places
-
       const cities = await CitiesService.getAll();
       this.setState({ cities: cities.data });
-      console.log(this.state);
+
+      // remove unavailables from places
+      const places = [...response.data.places];
+      const availables = [];
+
+      places.forEach((element) => {
+        if (!this.state.unavailables.some((una) => una.place === element.id)
+        && !availables.some((obj) => obj.id === element.id)) {
+          availables.push(element);
+        }
+      });
+
+      this.setState({ places: availables });
     }
     catch (e) {
       this.setState({ error: 'erreur serveur' });
