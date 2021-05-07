@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import { userService } from '../../../services/index';
 import Button from '../../../components/Button/index.jsx';
@@ -53,8 +54,10 @@ class LoginForm extends React.Component {
                   {this.state.error && <h6 className='error-form'>{this.state.error}</h6>}
                   <InputText type='email' name='email' value={this.state.email} handleChange={this.handleChange} placeholder={'Email'} border='top'/>
                   <InputText type='password' name='password' value={this.state.password} handleChange={this.handleChange} placeholder={'Password'} border='bottom'/>
-                  <Button size="large" class='submit-form' value="Se connecter" handleClick={this.handleClick} />
+                  <Button type={'submit'} size="large" class='submit-form' value="Se connecter" handleClick={this.handleClick} />
               </form>
+              <span>Vous n'avez pas de compte? </span>
+              <Link to='/signup'>Signup</Link>
           </main>
         )}
         </appContext.Consumer>

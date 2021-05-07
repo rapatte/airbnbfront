@@ -29,6 +29,7 @@ function App() {
     <Switch>
       <Route exact path='/' component={ Home } />
       <Route exact path='/login' component={ Login } />
+      <Route exact path='/signup' component={ Login } />
       <PrivateRoute exact path='/createPlace' component={ PlaceCreation } />
       <PrivateRoute exact path='/myPlaces' component={ PlaceCreation } />
       <Route exact path='/consult' component={ Bookingconsulte } />
