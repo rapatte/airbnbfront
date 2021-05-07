@@ -4,11 +4,14 @@
 
 section.grid-box {
     display: grid;
-    grid-row-gap: 32px;
-
+    grid-row-gap: 20px;
+    
     .card-place {
         grid-column: span 12;
         height: 300px;
+        border: 2px solid $lightmaincolor;
+        border-radius: 20px;
+        padding: 2%;
 
         .card-img-container {
             height: 80%;
