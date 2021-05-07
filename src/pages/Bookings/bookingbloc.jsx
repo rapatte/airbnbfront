@@ -4,7 +4,7 @@ import './style.scss';
 
 function Bookingbloc(props) {
   return (
-    <div className="bookingbloc" id={props.id}>
+    <div className="bookingbloc" id={props.id} onClick={() => this.props.history.push(`bookings?place_id=${this.props.id}`)}>
       <h2>{props.name}</h2>
       <p>{props.description}</p>
       <p>{props.city}</p>
