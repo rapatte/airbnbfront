@@ -1,21 +1,42 @@
 @import '../../../assets/main.scss';
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
+.logo{
+    display: flex;
+    align-items: center;
+    img{
+        height: 10vh;
+        margin: 0 auto;
+    }
+}
 
+.nav-list {
     display: flex;
     width: 100%;
-    justify-content: space-between;
-    li {
-        a {
-            text-decoration: none;
-            color: $black;
-            &:hover {
-                color: $whitesmoke;
-            }
-        }
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2% 0%;
+    background: $maincolor;
+    color: $white;
+
+    
+    
+    a {
+        text-transform: uppercase;
+        color: $white;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.198);
+        padding: 5% 0%;
+    }
+    a:last-child{
+        border-bottom: none;
     }
 
+    .button_red{
+        height: 5vh;
+    }
+}
+
+.nav-list > summary::-webkit-details-marker {
+    color: $black;
 }

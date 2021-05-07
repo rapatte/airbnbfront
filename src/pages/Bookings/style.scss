@@ -9,15 +9,17 @@
 
   h2{
     margin: 0;
-    color: $maincolor
+    color: $maincolor;
+    text-transform: capitalize;
   }
 
   .deatilsbloc{
     display: flex;
     margin: 3% 0%;
+    justify-content: space-between;
 
     div{
-      width: 20%;
+      width: auto;
       padding: 2%;
       margin: 1%;
       border: 1px solid $maincolor;
@@ -37,13 +39,15 @@
     p{
       display: flex;
       p{
-        margin: 0 2%;
+        margin: 0 1%;
         font-weight: bold;
+        text-transform: capitalize;
       }
     }
     .deatilsblocfordate{
       display: flex;
       margin: 3% 0%;
+      justify-content: space-between;
   
       div{
         width: 45%;

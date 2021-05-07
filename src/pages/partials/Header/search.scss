@@ -1,0 +1,32 @@
+@import "../../../assets/main.scss";
+
+form {
+    display: flex;
+    border: 2px solid rgb(255, 183, 183);
+    width: 95%;
+    border-radius: 15px;
+    margin: 2% auto;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2%;
+  .form-group {
+    display: flex;
+    flex-direction: column-reverse;
+    position: relative;
+    padding: 1% 0;
+    border-radius: 15px;
+
+
+    input[type="search"] {
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid $maincolor;
+      height: 5vh;
+      padding: 4px 8px;
+      width: 80%;
+      outline: none;
+    }
+
+  }
+}
