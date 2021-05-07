@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable class-methods-use-this */
 import React, { Component, Fragment } from 'react';
 import { placeService, CitiesService } from '../../services/index';
@@ -71,11 +72,11 @@ class Home extends Component {
     key={i} name={place.name}
     description={place.description}
     city={getCity(place.city)}/>);
-
     return (
         <main>
             {/* <h1>{(places.length !== 0) ? places[10].name : null}</h1> */}
-            {this.context.isAuth && <h6 >Connected as {this.context.user.user.email}</h6>}
+            {console.log(this.context.user, 'ok')}
+            {this.context.user !== null && <h6>Connected as {this.context.user.user.email} </h6>}
             <section className='grid-box'>
               {listPlaces}
             </section>
