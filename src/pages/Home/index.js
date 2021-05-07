@@ -2,8 +2,11 @@
 import React, { Component, Fragment } from 'react';
 import { placeService, CitiesService } from '../../services/index';
 import CardPlace from './Items/CardPlace.jsx';
+import { appContext } from '../../store';
 
 class Home extends Component {
+  static contextType = appContext;
+
   constructor(props) {
     super(props);
     this.state = {
@@ -70,6 +73,7 @@ class Home extends Component {
     return (
         <main>
             {/* <h1>{(places.length !== 0) ? places[10].name : null}</h1> */}
+            {this.context.isAuth && <h6 >Connected as {this.context.user.user.email}</h6>}
             <section className='grid-box'>
               {listPlaces}
             </section>

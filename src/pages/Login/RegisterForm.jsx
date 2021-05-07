@@ -43,8 +43,8 @@ class RegisterForm extends Component {
   render() {
     return (
         <main>
-            {this.state.error && <h6 className='error-form'>{this.state.error}</h6>}
             <form className='signup-form'>
+            {this.state.error && <h6 className='error-form'>{this.state.error}</h6>}
                 <Select name={'role'} value={this.state.role} handleChange={this.handleChange}/>
                 <InputText name='firstName' type='text' placeholder={'First name'} value={this.state.firstName} handleChange={this.handleChange}/>
                 <InputText name='lastName' type='text' placeholder={'Last name'} value={this.state.lastName} handleChange={this.handleChange}/>
