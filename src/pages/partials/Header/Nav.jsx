@@ -9,6 +9,7 @@ function Nav(props) {
   };
 
   return (
+
   <Fragment>
     <a href="/" className="logo"><img src="https://www.les-parrains.fr/wp-content/uploads/2019/12/Airbnb-Logo_large.png" alt="logo" /></a>
     <details className="nav-list">

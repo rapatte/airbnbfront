@@ -54,6 +54,8 @@ class Home extends Component {
   }
 
   render() {
+    // NEED A FUNCTION TO AVOID LONG FUNCTIONS
+    // console.log(this.state.places);
     const { cities, places } = this.state;
 
     const getCity = (cityId) => {

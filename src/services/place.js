@@ -14,6 +14,9 @@ const placeService = {
   },
   createPlace: async (place) => {
     return await api.post('/places', place);
+  },
+  getMyPlaces: async () => {
+    return await api.get('/myPlaces');
   }
 };
 
