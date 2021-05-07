@@ -6,6 +6,7 @@ import {
 import { Header } from './pages/partials/Header';
 import Login from './pages/Login';
 import Home from './pages/Home';
+import BookingsOnPlace from './pages/Bookingsonplace';
 import { appContext } from './store';
 import Bookings from './pages/Bookings';
 import PlaceCreation from './pages/PlaceCreation';
@@ -34,6 +35,7 @@ function App() {
       <PrivateRoute exact path='/myPlaces' component={ PlaceCreation } />
       <Route exact path='/consult' component={ Bookingconsulte } />
       <Route exact path='/bookings' component={Bookings} />
+      <Route exact path='/bookings/:id' component={BookingsOnPlace} />
     </Switch>
   </Router>
   );
