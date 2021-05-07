@@ -4,7 +4,7 @@ import {
   BrowserRouter as Router, Switch, Route, Redirect
 } from 'react-router-dom';
 import { Header } from './pages/partials/Header';
-import Login from './pages/Login';
+import { RegisterForm, LoginForm } from './pages/Login';
 import Home from './pages/Home';
 import BookingsOnPlace from './pages/Bookingsonplace';
 import { appContext } from './store';
@@ -30,8 +30,8 @@ function App() {
     <Header />
     <Switch>
       <Route exact path='/' component={ Home } />
-      <Route exact path='/login' component={ Login } />
-      <Route exact path='/signup' component={ Login } />
+      <Route exact path='/login' component={ LoginForm } />
+      <Route exact path='/signup' component={ RegisterForm } />
       <PrivateRoute exact path='/createPlace' component={ PlaceCreation } />
       <PrivateRoute exact path='/myPlaces' component={ PlaceCreation } />
       <Route exact path='/place/:id' component={ PlaceDetails } />

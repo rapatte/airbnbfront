@@ -25,10 +25,10 @@ class PlaceCreation extends Component {
 
   render() {
     return (
-      <Fragment>
+      <main>
         <CreationForm data={this}/>
         <MyPlaces data={this.state.myPlaces}/>
-      </Fragment>
+      </main>
     );
   }
 }
