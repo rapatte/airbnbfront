@@ -23,7 +23,7 @@ class SearchBar extends React.Component {
     //   element.parentElement.classList.add('focused');
     // };
     return (
-      <form>
+      <form className='search-form'>
         <div className="form-group">
           <input type="search" name="city" />
           <label htmlFor="city">City</label>

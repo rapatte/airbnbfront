@@ -2,7 +2,9 @@ import React from 'react';
 import Cookies from 'universal-cookie';
 import { userService } from '../../../services/index';
 import Button from '../../../components/Button/index.jsx';
+import InputText from '../../../components/InputText/index.jsx';
 import { appContext } from '../../../store';
+import './form.scss';
 
 const cookies = new Cookies();
 
@@ -45,13 +47,15 @@ class LoginForm extends React.Component {
       return (
         <appContext.Consumer>
         {(store) => (
-              <div>
+          <main>
+              <form className='login-form'>
                 {/* {console.log(store)} */}
                   {this.state.error && <h6>{this.state.error}</h6>}
-                  <input type="text" name="email" value={this.state.email} onChange={this.handleChange} />
-                  <input type="password" name="password" value={this.state.password} onChange={this.handleChange} />
-                  <Button size="small" value="Se connecter" handleClick={this.handleClick} />
-              </div>
+                  <InputText type='email' name='email' value={this.state.email} handleChange={this.handleChange} placeholder={'Email'} border='top'/>
+                  <InputText type='password' name='password' value={this.state.password} handleChange={this.handleChange} placeholder={'Password'} border='bottom'/>
+                  <Button size="large" value="Se connecter" handleClick={this.handleClick} />
+              </form>
+          </main>
         )}
         </appContext.Consumer>
       );
