@@ -1,8 +1,9 @@
 @import '../../../assets/main.scss';
 
-.login-form {
+.login-form, .signup-form {
     display: flex;
     flex-direction: column;
+    margin-bottom: 3%;
     & > * {
         margin: 0 auto;
     }
@@ -17,5 +18,14 @@
         margin-bottom: 2%;
         font-size: 0.75rem;
         font-weight: 500;
+    }
+}
+
+.signup-form {
+    input {
+        border-radius: 8px;
+        &:not(:last-of-type) {
+            margin-bottom: 2%;
+        }
     }
 }
