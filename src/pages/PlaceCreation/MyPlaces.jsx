@@ -5,9 +5,9 @@ import '../Bookings/style.scss';
 function MyPlaces(props) {
   const { data } = props;
   const places = data.map((place) => <div className="bookingbloc" key={place.id}>
-            <h2>{place.name}</h2>
+            <h2>{place.placeName}</h2>
             <p>{place.description}</p>
-            <p>{place.city}</p>
+            <p>{place.cityName}</p>
 
             <div className="deatilsbloc">
               <div><p>Rooms</p><p>{place.rooms}</p></div>
@@ -15,7 +15,7 @@ function MyPlaces(props) {
               <div><p>Guests</p><p>{place.max_guests}</p></div>
               <div><p>Price</p><p></p>{place.price_by_night}</div>
             </div>
-            <a href="#"><button className="button_red ">Delete</button></a>
+            <button className="button_red ">Delete</button>
           </div>);
   return (
     <Fragment>

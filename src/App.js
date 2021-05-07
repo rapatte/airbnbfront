@@ -10,6 +10,7 @@ import { appContext } from './store';
 import Bookings from './pages/Bookings';
 import PlaceCreation from './pages/PlaceCreation';
 import Bookingconsulte from './pages/bookingconsulte/index.jsx';
+import PlaceDetails from './pages/PlaceDetails';
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const store = React.useContext(appContext);
@@ -31,6 +32,7 @@ function App() {
       <Route exact path='/login' component={ Login } />
       <PrivateRoute exact path='/createPlace' component={ PlaceCreation } />
       <PrivateRoute exact path='/myPlaces' component={ PlaceCreation } />
+      <Route exact path='/place/:id' component={ PlaceDetails } />
       <Route exact path='/consult' component={ Bookingconsulte } />
       <Route exact path='/bookings' component={Bookings} />
     </Switch>
