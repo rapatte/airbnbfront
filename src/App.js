@@ -32,6 +32,7 @@ function App() {
       <PrivateRoute exact path='/createPlace' component={ PlaceCreation } />
       <Route exact path='/consult' component={ Bookingconsulte } />
       <Route exact path='/bookings' component={Bookings} />
+      {/* <Route exact path='/bookings?place_id=placeId}' component={Home} /> */}
     </Switch>
   </Router>
   );
