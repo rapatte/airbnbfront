@@ -34,7 +34,7 @@ class SearchBar extends React.Component {
           <label htmlFor="guests">Guests</label>
         </div>
 
-        <Button color="red" value="+" />
+        <Button class="red" value="+" />
       </form>
     );
   }

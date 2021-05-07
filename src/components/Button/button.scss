@@ -28,3 +28,12 @@ button.red {
     border-radius: 50%;
     color: $white;
 }
+
+.submit-form {
+    background-color: $maincolor;
+    border: none;
+    border-radius: 8px;
+    display: block;
+    padding: 3% 4% ;
+    color: $white;
+}
