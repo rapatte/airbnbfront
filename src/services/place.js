@@ -8,7 +8,8 @@ const placeService = {
   createPlace: async (place) => api.post('/places', place),
   getMyPlaces: async () => api.get('/myPlaces'),
   deletePlace: async (id) => api.delete(`/places/${id}`),
-  getOnePlace: async (id) => api.get(`/places/${id}`)
+  getOnePlace: async (id) => api.get(`/places/${id}`),
+  getPlacesByCity: async (city) => api.get(`/places/?city=${city}`)
 };
 
 export default placeService;
