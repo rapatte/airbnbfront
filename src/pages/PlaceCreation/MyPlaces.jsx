@@ -1,28 +1,27 @@
-import React from 'react';
-import { appContext } from '../../store';
+import React, { Fragment } from 'react';
+import { withRouter } from 'react-router-dom';
+import '../Bookings/style.scss';
 
-class MyPlaces extends React.Component {
-    static contextType = appContext;
+function MyPlaces(props) {
+  const { data } = props;
+  const places = data.map((place) => <div className="bookingbloc" key={place.id}>
+            <h2>{place.name}</h2>
+            <p>{place.description}</p>
+            <p>{place.city}</p>
 
-    constructor(props) {
-      super(props);
-      this.state = {
-        myPlaces: []
-      };
-    }
-
-    render() {
-      const places = this.props.data;
-      return (
-        <appContext.Consumer>
-        {(store) => (
-                    <div className='myPlaces'>
-                        {this.state.error && <h6>{this.state.error}</h6>}
-                    </div>
-        )}
-        </appContext.Consumer>
-      );
-    }
+            <div className="deatilsbloc">
+              <div><p>Rooms</p><p>{place.rooms}</p></div>
+              <div><p>Bathrooms</p><p>{place.bathrooms}</p></div>
+              <div><p>Guests</p><p>{place.max_guests}</p></div>
+              <div><p>Price</p><p></p>{place.price_by_night}</div>
+            </div>
+            <a href="#"><button className="button_red ">Delete</button></a>
+          </div>);
+  return (
+    <Fragment>
+      {places}
+    </Fragment>
+  );
 }
 
-export default MyPlaces;
+export default withRouter(MyPlaces);

@@ -15,10 +15,8 @@ class PlaceCreation extends Component {
 
   async componentDidMount() {
     try {
-      const responsePostPlaces = await placeService.postPlace();
-      this.setState({ createdPlace: responsePostPlaces.data });
-      const responseGetPlaces = await placeService.getAll();
-      this.setState({ myPlaces: responseGetPlaces.data });
+      const response = await placeService.getMyPlaces();
+      this.setState({ myPlaces: response.data.places });
     }
     catch (e) {
       this.setState({ error: 'erreur serveur' });
@@ -26,11 +24,10 @@ class PlaceCreation extends Component {
   }
 
   render() {
-    const places = this.state.myPlaces;
     return (
       <Fragment>
         <CreationForm data={this}/>
-        <MyPlaces data={places}/>
+        <MyPlaces data={this.state.myPlaces}/>
       </Fragment>
     );
   }

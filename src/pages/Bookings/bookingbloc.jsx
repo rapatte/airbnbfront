@@ -25,7 +25,7 @@ function Bookingbloc(props) {
           <div><p>Checkout</p><p>{props.checkout}</p></div>
       </div>
 
-          <a href=""><button className="button_red ">Contact</button></a>
+          <a href="#"><button className="button_red ">Contact</button></a>
         </div>
 
       </div>

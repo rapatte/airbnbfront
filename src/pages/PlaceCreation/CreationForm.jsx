@@ -2,6 +2,7 @@ import React from 'react';
 import { placeService } from '../../services/index';
 import { appContext } from '../../store';
 import Button from '../../components/Button/index.jsx';
+import './style.scss';
 
 class CreationForm extends React.Component {
     static contextType = appContext;
