@@ -63,7 +63,9 @@ class Home extends Component {
       return city ? city.name : cityId;
     };
 
-    const listPlaces = places.map((place, i) => <CardPlace key={i} name={place.name}
+    const listPlaces = places.map((place, i) => <CardPlace id={place.id}
+    history={this.props.history}
+    key={i} name={place.name}
     description={place.description}
     city={getCity(place.city)}/>);
 

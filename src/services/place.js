@@ -3,21 +3,12 @@
 import api from './api';
 
 const placeService = {
-  getAll: async () => {
-    return await api.get('/places');
-  },
-  getUnavailables: async (checkIn, checkOut) => {
-    return await api.get(`/places/?check_in=${checkIn}&check_out=${checkOut}`);
-  },
-  getPlacesByCity: async (city) => {
-    return await api.get(`/places/?city=${city}`);
-  },
-  createPlace: async (place) => {
-    return await api.post('/places', place);
-  },
-  getMyPlaces: async () => {
-    return await api.get('/myPlaces');
-  }
+  getAll: async () => api.get('/places'),
+  getUnavailables: async (checkIn, checkOut) => api.get(`/places/?check_in=${checkIn}&check_out=${checkOut}`),
+  createPlace: async (place) => api.post('/places', place),
+  getMyPlaces: async () => api.get('/myPlaces'),
+  deletePlace: async (id) => api.delete(`/places/${id}`),
+  getOnePlace: async (id) => api.get(`/places/${id}`)
 };
 
 export default placeService;
