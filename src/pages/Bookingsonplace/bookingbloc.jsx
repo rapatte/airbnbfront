@@ -4,7 +4,7 @@ import './style.scss';
 
 function Bookingbloc(props) {
   return (
-    <div className="bookingbloc" id={props.id} onClick={() => props.history.push(`bookings/${props.specialId}`)}>
+    <div className="bookingbloc" id={props.id} onClick={() => props.history.push(`bookings?place_id=${props.id}`)}>
       <h2>{props.name}</h2>
       <p>{props.description}</p>
       <p>{props.city}</p>
@@ -25,7 +25,7 @@ function Bookingbloc(props) {
           <div><p>Checkout</p><p>{props.checkout}</p></div>
       </div>
 
-          <a href="#"><button className="button_red ">Contact</button></a>
+          <a href=""><button className="button_red ">Contact</button></a>
         </div>
 
       </div>

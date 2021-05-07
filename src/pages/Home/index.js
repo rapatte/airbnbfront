@@ -16,13 +16,22 @@ class Home extends Component {
 
   async componentDidMount() {
     try {
-      const response = await placeService.getAll();
+      const defaultCity = 'Paris';
+      const response = await placeService.getPlacesByCity(defaultCity);
 
-      const checkIn = '2021-05-01';
-      const checkOut = '2021-06-01';
+      // get current month and year
+      const today = new Date();
+
+      const month = ((`0${today.getMonth() + 1}`).slice(-2));
+      const month2 = ((`0${today.getMonth() + 2}`).slice(-2));
+      const year = today.getFullYear();
+
+      const checkIn = `${year}-${month}-01`;
+      const checkOut = `${year}-${month2}-01`;
       const unavailables = await placeService.getUnavailables(checkIn, checkOut);
       this.setState({ unavailables: unavailables.data.places });
 
+      // get city name
       const cities = await CitiesService.getAll();
       this.setState({ cities: cities.data });
 
