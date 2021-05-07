@@ -8,8 +8,10 @@ class AppProvider extends React.Component {
     this.state = {
       user: null,
       isAuth: false,
+      showSearchBar: true,
       setUser: this.setUser,
-      setAuth: this.setAuth
+      setAuth: this.setAuth,
+      setShowSearch: this.setShowSearch
     };
   }
 
@@ -19,6 +21,10 @@ class AppProvider extends React.Component {
 
     setAuth = (boolean) => {
       this.setState({ isAuth: boolean });
+    }
+
+    setShowSearch = (boolean) => {
+      this.setState({ showSearchBar: false });
     }
 
     render() {

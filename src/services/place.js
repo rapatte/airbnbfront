@@ -9,6 +9,9 @@ const placeService = {
   getUnavailables: async (checkIn, checkOut) => {
     return await api.get(`/places/?check_in=${checkIn}&check_out=${checkOut}`);
   },
+  getPlacesByCity: async (city) => {
+    return await api.get(`/places/?city=${city}`);
+  },
   createPlace: async (place) => {
     return await api.post('/places', place);
   }

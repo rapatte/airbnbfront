@@ -1,0 +1,19 @@
+@import '../../assets/main.scss';
+
+$radius: 8px;
+
+.form-input {
+    height: 6vh;
+    padding: 4px 8px;
+    border: solid 1px $darkgrey;
+    font-size: 1.075rem;
+}
+
+.top {
+    border-radius: $radius $radius 0 0;
+}
+
+.bottom {
+    border-radius: 0 0 $radius $radius;
+    border-top: none;
+}

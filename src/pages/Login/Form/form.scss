@@ -1,0 +1,21 @@
+@import '../../../assets/main.scss';
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    & > * {
+        margin: 0 auto;
+    }
+    input {
+        width: 100%;
+        &:last-of-type {
+            margin-bottom: 2%;
+        }
+    }
+    .error-form {
+        color: red;
+        margin-bottom: 2%;
+        font-size: 0.75rem;
+        font-weight: 500;
+    }
+}
