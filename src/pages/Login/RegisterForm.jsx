@@ -1,9 +1,10 @@
 /* eslint-disable camelcase */
 import React, { Component } from 'react';
-import InputText from '../../../components/InputText/index.jsx';
-import Button from '../../../components/Button/index.jsx';
-import Select from './Select/index.jsx';
-import { userService } from '../../../services/index';
+import { Link } from 'react-router-dom';
+import InputText from '../../components/InputText/index.jsx';
+import Button from '../../components/Button/index.jsx';
+import Select from './Items/index.jsx';
+import { userService } from '../../services/index';
 
 import './form.scss';
 
@@ -51,6 +52,8 @@ class RegisterForm extends Component {
                 <InputText name='password' type='password' placeholder={'Password'} value={this.state.password} handleChange={this.handleChange}/>
                 <Button type={'submit'} size="large" class='submit-form' value='submit' handleClick={this.handleClick} />
             </form>
+            <span>Vous avez déjà un compte? </span>
+              <Link to='/login'>Login</Link>
         </main>
     );
   }

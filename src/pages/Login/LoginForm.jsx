@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Cookies from 'universal-cookie';
-import { userService } from '../../../services/index';
-import Button from '../../../components/Button/index.jsx';
-import InputText from '../../../components/InputText/index.jsx';
-import { appContext } from '../../../store';
+import { userService } from '../../services/index';
+import Button from '../../components/Button/index.jsx';
+import InputText from '../../components/InputText/index.jsx';
+import { appContext } from '../../store';
 import './form.scss';
 
 const cookies = new Cookies();
