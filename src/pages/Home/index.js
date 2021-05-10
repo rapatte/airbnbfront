@@ -75,7 +75,6 @@ class Home extends Component {
     return (
         <main>
             {/* <h1>{(places.length !== 0) ? places[10].name : null}</h1> */}
-            {console.log(this.context.user, 'ok')}
             {this.context.user !== null && <h6>Connected as {this.context.user.user.email} </h6>}
             <section className='grid-box'>
               {listPlaces}

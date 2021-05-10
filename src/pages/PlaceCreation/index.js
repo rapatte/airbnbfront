@@ -16,6 +16,7 @@ class PlaceCreation extends Component {
   async componentDidMount() {
     try {
       const response = await placeService.getMyPlaces();
+      console.log(response);
       this.setState({ myPlaces: response.data.places });
     }
     catch (e) {

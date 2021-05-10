@@ -9,8 +9,8 @@ function Bookingconsulte(props) {
             <h2>Votre voyage</h2>
             <div className="datecontainer">
               <div><p>Arrivée</p><p>05/05/2020</p></div>
-              <div><p>Depatrt</p><p>05/05/2020</p></div>
-              <div><p>Voyagageurs</p><p>2 vayogers</p></div>
+              <div><p>Depart</p><p>05/05/2020</p></div>
+              <div><p>Voyageur</p><p>2 voyageurs</p></div>
             </div>
 
             <div className="cash">
